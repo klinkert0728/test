@@ -1,0 +1,26 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'test' do
+	pod 'SVProgressHUD'
+    pod 'SBPickerSelector'
+    pod 'DateTools', :git => 'https://github.com/MatthewYork/DateTools', :branch => 'swift'
+	pod 'RealmSwift'
+	pod 'Alamofire'
+	pod 'AlamofireImage'
+	pod 'ObjectMapper'
+    pod 'RealReachability'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxRealm'
+    pod 'AlamofireObjectMapper'
+    pod 'ReachabilitySwift', '~> 3'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
