@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2BE5856EC22A18DC2B9229F3 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC10814462896D8A5487F01 /* Pods_test.framework */; };
+		96D73D951F4F77D600EA206D /* PendingRequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73D931F4F77D600EA206D /* PendingRequestsTableViewCell.swift */; };
+		96D73D961F4F77D600EA206D /* PendingRequestsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D73D941F4F77D600EA206D /* PendingRequestsTableViewCell.xib */; };
+		96D73D9B1F4F782200EA206D /* PendingRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73D9A1F4F782200EA206D /* PendingRequestTableViewController.swift */; };
+		96D73D9D1F4F782E00EA206D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73D9C1F4F782E00EA206D /* SettingsTableViewController.swift */; };
+		96D73DA21F4F786400EA206D /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DA11F4F786400EA206D /* BaseTableViewController.swift */; };
+		96D73DA51F4F78F600EA206D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DA41F4F78F600EA206D /* Request.swift */; };
+		96D73DAB1F4F79A600EA206D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D73DAA1F4F79A600EA206D /* Login.storyboard */; };
+		96D73DAE1F4F79E600EA206D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DAD1F4F79E600EA206D /* LoginViewController.swift */; };
+		96D73DB11F4F7A0E00EA206D /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DB01F4F7A0E00EA206D /* NavigationHelper.swift */; };
+		96D73DB31F4F7A9200EA206D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DB21F4F7A9200EA206D /* User.swift */; };
+		96D73DB51F4F7B6200EA206D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DB41F4F7B6200EA206D /* RealmHelper.swift */; };
+		96D73DB71F4F7C4000EA206D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DB61F4F7C3F00EA206D /* Extensions.swift */; };
+		96D73DBA1F4F801600EA206D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DB91F4F801600EA206D /* EndPoint.swift */; };
+		96D73DBC1F4FA21600EA206D /* RequestVacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DBB1F4FA21600EA206D /* RequestVacationViewController.swift */; };
+		96D73DBE1F4FA24B00EA206D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DBD1F4FA24B00EA206D /* BaseViewController.swift */; };
+		96D73DC21F4FA2EC00EA206D /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D73DC01F4FA2EC00EA206D /* EmptyTableViewCell.swift */; };
+		96D73DC31F4FA2EC00EA206D /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D73DC11F4FA2EC00EA206D /* EmptyTableViewCell.xib */; };
 		96E381D21F4F75B50040FF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E381D11F4F75B50040FF5A /* AppDelegate.swift */; };
 		96E381D41F4F75B50040FF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E381D31F4F75B50040FF5A /* ViewController.swift */; };
 		96E381D71F4F75B50040FF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E381D51F4F75B50040FF5A /* Main.storyboard */; };
@@ -18,6 +35,23 @@
 /* Begin PBXFileReference section */
 		6AC10814462896D8A5487F01 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCD8193E0E87095F0EC83D9 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
+		96D73D931F4F77D600EA206D /* PendingRequestsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingRequestsTableViewCell.swift; sourceTree = "<group>"; };
+		96D73D941F4F77D600EA206D /* PendingRequestsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingRequestsTableViewCell.xib; sourceTree = "<group>"; };
+		96D73D9A1F4F782200EA206D /* PendingRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingRequestTableViewController.swift; sourceTree = "<group>"; };
+		96D73D9C1F4F782E00EA206D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		96D73DA11F4F786400EA206D /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		96D73DA41F4F78F600EA206D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		96D73DAA1F4F79A600EA206D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		96D73DAD1F4F79E600EA206D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		96D73DB01F4F7A0E00EA206D /* NavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		96D73DB21F4F7A9200EA206D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		96D73DB41F4F7B6200EA206D /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		96D73DB61F4F7C3F00EA206D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		96D73DB91F4F801600EA206D /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		96D73DBB1F4FA21600EA206D /* RequestVacationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestVacationViewController.swift; sourceTree = "<group>"; };
+		96D73DBD1F4FA24B00EA206D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		96D73DC01F4FA2EC00EA206D /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		96D73DC11F4FA2EC00EA206D /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		96E381CE1F4F75B50040FF5A /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E381D11F4F75B50040FF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E381D31F4F75B50040FF5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +83,113 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		96D73D921F4F77A900EA206D /* VacationCell */ = {
+			isa = PBXGroup;
+			children = (
+				96D73D931F4F77D600EA206D /* PendingRequestsTableViewCell.swift */,
+				96D73D941F4F77D600EA206D /* PendingRequestsTableViewCell.xib */,
+			);
+			path = VacationCell;
+			sourceTree = "<group>";
+		};
+		96D73D971F4F77EC00EA206D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DAC1F4F79D500EA206D /* LoginViewControllers */,
+				96D73D9E1F4F783E00EA206D /* BaseControllers */,
+				96D73D991F4F781400EA206D /* SettingsTableViewController */,
+				96D73D981F4F780C00EA206D /* PendingTableViewController */,
+				96D73DBB1F4FA21600EA206D /* RequestVacationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96D73D981F4F780C00EA206D /* PendingTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96D73D9A1F4F782200EA206D /* PendingRequestTableViewController.swift */,
+			);
+			path = PendingTableViewController;
+			sourceTree = "<group>";
+		};
+		96D73D991F4F781400EA206D /* SettingsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96D73D9C1F4F782E00EA206D /* SettingsTableViewController.swift */,
+			);
+			path = SettingsTableViewController;
+			sourceTree = "<group>";
+		};
+		96D73D9E1F4F783E00EA206D /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DA11F4F786400EA206D /* BaseTableViewController.swift */,
+				96D73DBD1F4FA24B00EA206D /* BaseViewController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		96D73DA31F4F78E800EA206D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DA41F4F78F600EA206D /* Request.swift */,
+				96D73DB21F4F7A9200EA206D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96D73DA61F4F796700EA206D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DBF1F4FA2D000EA206D /* EmptyCell */,
+				96D73DA91F4F799600EA206D /* LoginStoryboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96D73DA91F4F799600EA206D /* LoginStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DAA1F4F79A600EA206D /* Login.storyboard */,
+			);
+			path = LoginStoryboard;
+			sourceTree = "<group>";
+		};
+		96D73DAC1F4F79D500EA206D /* LoginViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DAD1F4F79E600EA206D /* LoginViewController.swift */,
+			);
+			path = LoginViewControllers;
+			sourceTree = "<group>";
+		};
+		96D73DAF1F4F79FF00EA206D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DB01F4F7A0E00EA206D /* NavigationHelper.swift */,
+				96D73DB41F4F7B6200EA206D /* RealmHelper.swift */,
+				96D73DB61F4F7C3F00EA206D /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		96D73DB81F4F7FF000EA206D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DB91F4F801600EA206D /* EndPoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		96D73DBF1F4FA2D000EA206D /* EmptyCell */ = {
+			isa = PBXGroup;
+			children = (
+				96D73DC01F4FA2EC00EA206D /* EmptyTableViewCell.swift */,
+				96D73DC11F4FA2EC00EA206D /* EmptyTableViewCell.xib */,
+			);
+			path = EmptyCell;
+			sourceTree = "<group>";
+		};
 		96E381C51F4F75B50040FF5A = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +211,12 @@
 		96E381D01F4F75B50040FF5A /* test */ = {
 			isa = PBXGroup;
 			children = (
+				96D73DB81F4F7FF000EA206D /* Networking */,
+				96D73DAF1F4F79FF00EA206D /* Helpers */,
+				96D73DA61F4F796700EA206D /* Views */,
+				96D73DA31F4F78E800EA206D /* Models */,
+				96D73D971F4F77EC00EA206D /* Controllers */,
+				96D73D921F4F77A900EA206D /* VacationCell */,
 				96E381D11F4F75B50040FF5A /* AppDelegate.swift */,
 				96E381D31F4F75B50040FF5A /* ViewController.swift */,
 				96E381D51F4F75B50040FF5A /* Main.storyboard */,
@@ -153,6 +300,9 @@
 			files = (
 				96E381DC1F4F75B50040FF5A /* LaunchScreen.storyboard in Resources */,
 				96E381D91F4F75B50040FF5A /* Assets.xcassets in Resources */,
+				96D73D961F4F77D600EA206D /* PendingRequestsTableViewCell.xib in Resources */,
+				96D73DC31F4FA2EC00EA206D /* EmptyTableViewCell.xib in Resources */,
+				96D73DAB1F4F79A600EA206D /* Login.storyboard in Resources */,
 				96E381D71F4F75B50040FF5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,8 +394,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D73DBA1F4F801600EA206D /* EndPoint.swift in Sources */,
+				96D73DBC1F4FA21600EA206D /* RequestVacationViewController.swift in Sources */,
+				96D73DA21F4F786400EA206D /* BaseTableViewController.swift in Sources */,
 				96E381D41F4F75B50040FF5A /* ViewController.swift in Sources */,
+				96D73D9D1F4F782E00EA206D /* SettingsTableViewController.swift in Sources */,
+				96D73DC21F4FA2EC00EA206D /* EmptyTableViewCell.swift in Sources */,
+				96D73DBE1F4FA24B00EA206D /* BaseViewController.swift in Sources */,
+				96D73D951F4F77D600EA206D /* PendingRequestsTableViewCell.swift in Sources */,
+				96D73DAE1F4F79E600EA206D /* LoginViewController.swift in Sources */,
+				96D73DA51F4F78F600EA206D /* Request.swift in Sources */,
 				96E381D21F4F75B50040FF5A /* AppDelegate.swift in Sources */,
+				96D73DB71F4F7C4000EA206D /* Extensions.swift in Sources */,
+				96D73DB51F4F7B6200EA206D /* RealmHelper.swift in Sources */,
+				96D73DB11F4F7A0E00EA206D /* NavigationHelper.swift in Sources */,
+				96D73DB31F4F7A9200EA206D /* User.swift in Sources */,
+				96D73D9B1F4F782200EA206D /* PendingRequestTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +577,7 @@
 				96E381E21F4F75B50040FF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
