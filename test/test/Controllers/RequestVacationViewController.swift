@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RequestVacationViewController: BaseViewController {
 
     @IBOutlet weak var approveVacation: UIButton!
+    
+    var reloadClosure:(()->())?
+    var request:Request?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,8 @@ class RequestVacationViewController: BaseViewController {
     
     override func configureAppearance() {
         super.configureAppearance()
+        
+        
         if !User.isAdmin {
             approveVacation.isHidden = true
         }else {
@@ -33,6 +39,16 @@ class RequestVacationViewController: BaseViewController {
     }
     
     @IBAction func aproveVacationAction(_ sender: Any) {
+        guard let current  = request, !current.approved else {
+            return
+        }
+        
+        Realm.update { (realm) in
+           current.approved = true
+        }
+        
+        reloadClosure?()
+        
     }
 
     /*

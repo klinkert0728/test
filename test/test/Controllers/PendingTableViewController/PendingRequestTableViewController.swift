@@ -17,7 +17,7 @@ class PendingRequestTableViewController: BaseTableViewController {
     var pendingRequest = [Request]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getPendingRequest()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -39,9 +39,7 @@ class PendingRequestTableViewController: BaseTableViewController {
         super.configureAppearance()
         
         addPullToRefesh()
-        if User.isAdmin {
-            self.navigationItem.rightBarButtonItem = nil
-        }
+       
         tableView.tableHeaderView       = refreshControl
         tableView.tableFooterView       = UIView()
         tableView.estimatedRowHeight    = 60
@@ -49,8 +47,16 @@ class PendingRequestTableViewController: BaseTableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if User.isAdmin {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         
         if !User.isLoggedIn {
             let loginNavigation = Navigation.loginNavigationController()
@@ -61,10 +67,7 @@ class PendingRequestTableViewController: BaseTableViewController {
                 self.getPendingRequest()
             }
             present(loginNavigation, animated: true, completion: nil)
-        }else {
-            getPendingRequest()
         }
-        
     }
     
     // MARK: - Table view data source
@@ -102,6 +105,12 @@ class PendingRequestTableViewController: BaseTableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if User.isAdmin {
+            performSegue(withIdentifier: "approveRequest", sender: pendingRequest[indexPath.row])
+        }
+    }
+    
     
     
     private func getPendingRequest() {
@@ -121,6 +130,18 @@ class PendingRequestTableViewController: BaseTableViewController {
         super.refesh()
         
         getPendingRequest()
+    }
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if identifier == "approveRequest" {
+            let nextVc = Navigation.addRequestViewController()
+            nextVc.reloadClosure = {
+                self.navigationController?.popViewController(animated: true)
+                self.tableView.reloadData()
+            }
+            nextVc.request  = sender as? Request
+            self.navigationController?.pushViewController(nextVc, animated: true)
+        }
     }
     
     

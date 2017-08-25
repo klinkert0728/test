@@ -28,6 +28,10 @@ class Navigation {
         return UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
     }
     
+    class func addRequestViewController() -> RequestVacationViewController {
+         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RequestVacationViewController") as! RequestVacationViewController
+    }
+    
     
     
     

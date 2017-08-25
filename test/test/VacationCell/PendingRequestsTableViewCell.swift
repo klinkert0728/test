@@ -51,6 +51,11 @@ class PendingRequestsTableViewCell: UITableViewCell {
         
         let components = calendar.dateComponents([.day], from: date1, to: date2)
         
+        if let day  = components.day {
+             return "\(day)"
+        }
+       
+        
         return ""
         
     }

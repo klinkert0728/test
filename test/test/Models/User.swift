@@ -40,6 +40,12 @@ class User: Object, Mappable {
         return user
     }
     
+    class func logOut() {
+        Realm.update { (realm) in
+            realm.delete(realm.objects(User.self))
+        }
+    }
+    
     class var isAdmin: Bool {
         guard let current = currentUser else {
             return false
