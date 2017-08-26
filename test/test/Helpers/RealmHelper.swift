@@ -10,6 +10,27 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 import Realm
+import RxSwift
+import RxCocoa
+import RxRealm
+import RealmSwift
+
+
+public func bindTwo <E,C: ControlPropertyType>(property: C, variable: Variable<E>) -> Disposable where C.E == E?  {
+    
+    let bindToUIDisposable = variable.asObservable()
+        .bind(to: property)
+    let bindToVariable = property
+        .subscribe(onNext: { n in
+            if let n = n {
+                variable.value = n
+            }
+        }, onCompleted:  {
+            bindToUIDisposable.dispose()
+        })
+    
+    return Disposables.create([bindToUIDisposable, bindToVariable])
+}
 
 
 open class DKHDateTransform: TransformType {

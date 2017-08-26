@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="S4l-fG-vMp">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="nwU-3T-W8B">
                             <connections>
-                                <segue destination="hsH-KM-9iO" kind="show" id="6qt-F6-3p4"/>
+                                <action selector="addVacationRequest:" destination="pAQ-aZ-DMx" id="T85-wx-WCV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -124,12 +124,38 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQk-pr-VhA">
                                 <rect key="frame" x="8" y="382" width="359" height="30"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cY9-NE-JK8"/>
                                 </constraints>
-                                <state key="normal" title="Approve"/>
+                                <state key="normal" title="Approve">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="aproveVacationAction:" destination="hsH-KM-9iO" eventType="touchUpInside" id="VeT-Ru-PPs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-4b-G41">
+                                <rect key="frame" x="144" y="187" width="223" height="30"/>
+                                <connections>
+                                    <action selector="pickerStartDate:" destination="hsH-KM-9iO" eventType="touchUpInside" id="2f2-Ko-DZR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bl4-Fj-2g3">
+                                <rect key="frame" x="144" y="244" width="223" height="30"/>
+                                <connections>
+                                    <action selector="pickerEndDate:" destination="hsH-KM-9iO" eventType="touchUpInside" id="FCb-Aw-bI7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EY-iC-82w">
+                                <rect key="frame" x="144" y="299" width="223" height="30"/>
+                                <connections>
+                                    <action selector="presentPickerLast:" destination="hsH-KM-9iO" eventType="touchUpInside" id="6PW-8v-5Br"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,11 +165,17 @@
                             <constraint firstItem="L23-NM-s4s" firstAttribute="trailing" secondItem="Sld-oY-3Pf" secondAttribute="trailing" id="1XD-z8-fFy"/>
                             <constraint firstItem="9KY-LC-TsX" firstAttribute="top" secondItem="inU-fh-nko" secondAttribute="bottom" constant="17" id="248-8x-mBY"/>
                             <constraint firstItem="Sld-oY-3Pf" firstAttribute="centerY" secondItem="1Q1-Mo-N7N" secondAttribute="centerY" id="5le-iS-1Hf"/>
+                            <constraint firstItem="Bl4-Fj-2g3" firstAttribute="top" secondItem="7Xu-4b-G41" secondAttribute="bottom" constant="27" id="6UK-lv-ZkY"/>
                             <constraint firstItem="L23-NM-s4s" firstAttribute="top" secondItem="Sld-oY-3Pf" secondAttribute="bottom" constant="33" id="7MF-H0-o5o"/>
+                            <constraint firstItem="7Xu-4b-G41" firstAttribute="leading" secondItem="L23-NM-s4s" secondAttribute="leading" id="Aen-vQ-MTj"/>
                             <constraint firstItem="mxE-qV-21Y" firstAttribute="trailing" secondItem="L23-NM-s4s" secondAttribute="trailing" id="DMh-Ov-GNO"/>
                             <constraint firstItem="h1i-I9-Wnl" firstAttribute="centerY" secondItem="kiA-VB-rrk" secondAttribute="centerY" id="EAp-nk-Qhd"/>
+                            <constraint firstItem="Bl4-Fj-2g3" firstAttribute="trailing" secondItem="mxE-qV-21Y" secondAttribute="trailing" id="Fho-bb-GGg"/>
                             <constraint firstItem="kiA-VB-rrk" firstAttribute="trailing" secondItem="mxE-qV-21Y" secondAttribute="trailing" id="GCa-87-BAo"/>
+                            <constraint firstItem="5EY-iC-82w" firstAttribute="leading" secondItem="kiA-VB-rrk" secondAttribute="leading" id="Kof-xJ-QBH"/>
+                            <constraint firstItem="Bl4-Fj-2g3" firstAttribute="height" secondItem="mxE-qV-21Y" secondAttribute="height" id="LYi-Wq-N1D"/>
                             <constraint firstItem="1Q1-Mo-N7N" firstAttribute="leading" secondItem="u04-bj-Zd9" secondAttribute="leading" constant="8" id="Nbp-Po-CwH"/>
+                            <constraint firstItem="7Xu-4b-G41" firstAttribute="top" secondItem="Sld-oY-3Pf" secondAttribute="bottom" constant="33" id="Nks-Ad-RG6"/>
                             <constraint firstAttribute="trailing" secondItem="kiA-VB-rrk" secondAttribute="trailing" constant="8" id="QC0-es-oki"/>
                             <constraint firstItem="L23-NM-s4s" firstAttribute="leading" secondItem="Sld-oY-3Pf" secondAttribute="leading" id="R04-Hf-dhn"/>
                             <constraint firstAttribute="trailing" secondItem="DQk-pr-VhA" secondAttribute="trailing" constant="8" id="Rcf-Uo-Qli"/>
@@ -156,24 +188,41 @@
                             <constraint firstItem="DQk-pr-VhA" firstAttribute="top" secondItem="h1i-I9-Wnl" secondAttribute="bottom" constant="50" id="YZg-5E-vU3"/>
                             <constraint firstItem="9KY-LC-TsX" firstAttribute="centerY" secondItem="mxE-qV-21Y" secondAttribute="centerY" id="Ysw-HB-9NG"/>
                             <constraint firstItem="kiA-VB-rrk" firstAttribute="leading" secondItem="mxE-qV-21Y" secondAttribute="leading" id="aPc-xO-14D"/>
+                            <constraint firstItem="Bl4-Fj-2g3" firstAttribute="centerY" secondItem="mxE-qV-21Y" secondAttribute="centerY" id="ags-Xu-GGl"/>
                             <constraint firstItem="kiA-VB-rrk" firstAttribute="top" secondItem="mxE-qV-21Y" secondAttribute="bottom" constant="25" id="bBy-7C-FYc"/>
                             <constraint firstItem="kiA-VB-rrk" firstAttribute="leading" secondItem="h1i-I9-Wnl" secondAttribute="trailing" constant="8" id="c3t-6f-f7Z"/>
+                            <constraint firstItem="7Xu-4b-G41" firstAttribute="centerY" secondItem="L23-NM-s4s" secondAttribute="centerY" id="cui-Ht-FRE"/>
+                            <constraint firstItem="5EY-iC-82w" firstAttribute="trailing" secondItem="kiA-VB-rrk" secondAttribute="trailing" id="ds4-Fd-Tnd"/>
                             <constraint firstItem="xBc-rE-169" firstAttribute="leading" secondItem="u04-bj-Zd9" secondAttribute="leading" constant="8" id="f8O-qg-hgO"/>
                             <constraint firstItem="DQk-pr-VhA" firstAttribute="leading" secondItem="u04-bj-Zd9" secondAttribute="leading" constant="8" id="ie1-HC-pYm"/>
+                            <constraint firstItem="7Xu-4b-G41" firstAttribute="trailing" secondItem="L23-NM-s4s" secondAttribute="trailing" id="jI8-XD-y75"/>
                             <constraint firstItem="mxE-qV-21Y" firstAttribute="top" secondItem="L23-NM-s4s" secondAttribute="bottom" constant="27" id="kqd-hb-3gT"/>
+                            <constraint firstItem="5EY-iC-82w" firstAttribute="height" secondItem="kiA-VB-rrk" secondAttribute="height" id="oev-SO-n7O"/>
                             <constraint firstAttribute="trailing" secondItem="Sld-oY-3Pf" secondAttribute="trailing" constant="8" id="pOU-4h-0FW"/>
                             <constraint firstItem="1Q1-Mo-N7N" firstAttribute="top" secondItem="xBc-rE-169" secondAttribute="bottom" constant="10" id="pWt-SZ-ISE"/>
+                            <constraint firstItem="5EY-iC-82w" firstAttribute="top" secondItem="Bl4-Fj-2g3" secondAttribute="bottom" constant="25" id="pjH-tt-Ebf"/>
+                            <constraint firstItem="5EY-iC-82w" firstAttribute="centerX" secondItem="kiA-VB-rrk" secondAttribute="centerX" id="q4K-RR-tds"/>
                             <constraint firstItem="h1i-I9-Wnl" firstAttribute="leading" secondItem="u04-bj-Zd9" secondAttribute="leading" constant="8" id="rKY-09-yzo"/>
                             <constraint firstItem="inU-fh-nko" firstAttribute="top" secondItem="1Q1-Mo-N7N" secondAttribute="bottom" constant="23" id="vCB-rJ-MqU"/>
+                            <constraint firstItem="7Xu-4b-G41" firstAttribute="height" secondItem="L23-NM-s4s" secondAttribute="height" id="wQT-k2-oFW"/>
+                            <constraint firstItem="Bl4-Fj-2g3" firstAttribute="leading" secondItem="mxE-qV-21Y" secondAttribute="leading" id="wwp-tM-RrD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="4T6-2x-scb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kN0-BU-Gaj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="kN0-BU-Gaj">
+                            <connections>
+                                <action selector="saveRequest:" destination="hsH-KM-9iO" id="vgd-D9-Pug"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="approveVacation" destination="DQk-pr-VhA" id="uvY-oA-Qpq"/>
+                        <outlet property="endDateTextField" destination="mxE-qV-21Y" id="Pat-Pc-ksQ"/>
+                        <outlet property="lastVacationTextField" destination="kiA-VB-rrk" id="epi-WG-XGs"/>
+                        <outlet property="nameTextField" destination="Sld-oY-3Pf" id="RSi-sI-b8D"/>
+                        <outlet property="startDateTextfield" destination="L23-NM-s4s" id="UUr-41-vMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0D-KR-h5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,7 +280,7 @@
         <scene sceneID="ozh-0s-RhJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J75-qL-u33" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PjH-oS-eB9"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="750-home" selectedImage="750-home-selected" id="PjH-oS-eB9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WdT-OI-TwA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -250,7 +299,7 @@
         <scene sceneID="2gC-Gj-IAN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nif-9p-Tfl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="pay-8X-BRL"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="740-gear" selectedImage="740-gear-selected" id="pay-8X-BRL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVs-99-AtH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -266,7 +315,10 @@
             <point key="canvasLocation" x="1320.8" y="579.76011994002999"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="GGm-dj-vCD"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="740-gear" width="21" height="22"/>
+        <image name="740-gear-selected" width="21" height="22"/>
+        <image name="750-home" width="26" height="21"/>
+        <image name="750-home-selected" width="25" height="20"/>
+    </resources>
 </document>

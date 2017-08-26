@@ -51,6 +51,8 @@ class PendingRequestTableViewController: BaseTableViewController {
         super.viewWillAppear(animated)
         if User.isAdmin {
             self.navigationItem.rightBarButtonItem = nil
+        }else {
+            self.navigationItem.rightBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentRequestVacation(request:)))
         }
     }
     
@@ -111,6 +113,11 @@ class PendingRequestTableViewController: BaseTableViewController {
         }
     }
     
+    func presentRequestVacation(request:Request?) {
+        
+        performSegue(withIdentifier: "approveRequest", sender: request)
+    }
+    
     
     
     private func getPendingRequest() {
@@ -137,13 +144,17 @@ class PendingRequestTableViewController: BaseTableViewController {
             let nextVc = Navigation.addRequestViewController()
             nextVc.reloadClosure = {
                 self.navigationController?.popViewController(animated: true)
-                self.tableView.reloadData()
+                self.getPendingRequest()
+                
             }
             nextVc.request  = sender as? Request
             self.navigationController?.pushViewController(nextVc, animated: true)
         }
     }
     
+    @IBAction func addVacationRequest(_ sender: Any) {
+        presentRequestVacation(request: nil)
+    }
     
     //    private func populatePredefinedData() {
     //        Realm.update { (realm) in

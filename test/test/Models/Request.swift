@@ -15,8 +15,8 @@ import RealReachability
 
 class Request: Object, Mappable {
     
-    dynamic var processId   = ""
-    dynamic var process     = ""
+    dynamic var processId       = ""
+    dynamic var process         = ""
     dynamic var activityId      = ""
     dynamic var activity        = ""
     dynamic var requestDate     = Date()
@@ -57,9 +57,9 @@ class Request: Object, Mappable {
         Realm.update(updateClosure: { (realm) in
             var pending = [Request]()
             if let user = realm.objects(User.self).first, user.type == "Admin" {
-                pending = Array(realm.objects(Request.self).filter("predefined = \(true)"))
+                pending = Array(realm.objects(Request.self).sorted(byKeyPath: "requestDate", ascending: false))
             }else {
-                pending = Array(realm.objects(Request.self).filter("predefined = \(false)"))
+                pending = Array(realm.objects(Request.self).filter("predefined = \(false)").sorted(byKeyPath: "requestDate", ascending: false))
             }
           
             successClosure(Array(pending))
